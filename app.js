@@ -10,7 +10,7 @@ mongoose.connect(`mongodb://localhost/test`, {useNewUrlParser: true, useUnifiedT
 const app = express();
 const port = 3000;
 
-app.use(express.json({limit: '100kb'}));
+app.use(express.json({limit: '10mb'}));
 app.use('/', routes, (err, req, res, next) => {
   // default to 500 internal server error unless we've defined a specific error
   let code = 500;
